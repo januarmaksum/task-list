@@ -1,15 +1,13 @@
 import React from "react";
 import Logo from "../assets/logo.png";
 
-class Header extends React.Component {
-    render() {
-        return (
-            <div>
-                <img style={headerLogo} src={Logo} alt="logo"/>
-                <h1 style={headerTitle}>React Todo App</h1>
-            </div>
-        )
-    }
+const Header = () => {
+    return (
+        <div>
+            <img style={headerLogo} src={Logo} alt="logo"/>
+            <h1 style={headerTitle}>React Todo App</h1>
+        </div>
+    )
 }
 
 const headerLogo = {
