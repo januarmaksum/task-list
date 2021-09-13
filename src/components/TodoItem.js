@@ -1,18 +1,23 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Button from "./Button";
 
-class TodoItem extends React.Component {
-    render() {
-        return (
-            <div style={todoItems}>
-                <h3>This is task one</h3>
-                <div>
-                    <Button text="edit" variant="success"/>
-                    <Button text="delete" variant="danger" style={customStyleButton}/>
-                </div>
+const TodoItem = (props) => {
+    const {todo} = props
+    console.log(todo)
+    return (
+        <div style={todoItems}>
+            <h3 style={todoTitle}>{todo}</h3>
+            <div>
+                <Button text="edit" variant="success"/>
+                <Button text="delete" variant="danger" style={customStyleButton}/>
             </div>
-        )
-    }
+        </div>
+    )
+}
+
+TodoItem.propTypes = {
+    todo: PropTypes.string
 }
 
 const todoItems = {
@@ -21,7 +26,12 @@ const todoItems = {
     alignItems: "center",
     justifyContent: "space-between",
     backgroundColor: "#218dfd",
-    color: "#fff"
+    color: "#fff",
+    marginBottom: "15px"
+}
+
+const todoTitle = {
+    margin: "0"
 }
 
 const customStyleButton = {

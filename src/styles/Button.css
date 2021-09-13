@@ -28,3 +28,9 @@
     background-color: #dc3545;
     border-color: #dc3545;
 }
+
+.btn-primary {
+    color: #fff;
+    background-color: #089C99;
+    border-color: #089C99; 
+}

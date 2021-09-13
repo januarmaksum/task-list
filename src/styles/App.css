@@ -375,3 +375,7 @@ body {
     max-width: 650px;
     margin: 5rem auto 0;
 }
+
+input:focus {
+    outline: none;
+}
