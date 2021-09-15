@@ -17,13 +17,18 @@ class App extends React.Component {
             }
         ]
     }
+    deleteTask = id => {
+        this.setState({
+            todos: this.state.todos.filter(item => item.id !== id)
+        })
+    }
     render() {
         const { todos } = this.state
         return (
             <div className="container">
                 <Header/>
                 {todos.map(item =>
-                    <TodoItem key={item.id} todo={item.title} />
+                    <TodoItem key={item.id} todo={item} deleteItem={this.deleteTask} />
                 )}
                 <FormInput/>
             </div>
