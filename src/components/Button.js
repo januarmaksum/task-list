@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "../styles/Button.css";
 
-const Button = (props) => {
+const Button = props => {
     const { variant, text, action } = props;
     return (
         <button 
